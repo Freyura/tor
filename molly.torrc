@@ -1,0 +1,31 @@
+SOCKSPort 9050 IsolateClientProtocol IsolateDestPort IsolateDestAddr
+ORPort 443 IsolateClientProtocol IsolateDestPort IsolateDestAddr
+DirPort 80
+DNSPort 53
+
+RunAsDaemon 0
+ControlPort 9051
+HashedControlPassword 16:26F31D5938E75D266017C49C8FA8A80A249772DA7F14292C3F597A3FD7
+
+Address molly.kitties4privacy.nl
+Nickname Molly
+BandwidthRate 2560 KBytes
+BandwidthBurst 128 MBytes
+RelayBandwidthRate 2048 KBytes
+RelayBandwidthBurst 128 MBytes
+AccountingMax 5500 GBytes
+AccountingRule sum
+ContactInfo Molly <Miauw@kitties4privacy.nl>
+DirPortFrontPage /etc/tor/dirport.html
+
+ExitRelay 0
+ExitPolicy reject *:*
+
+CellStatistics 1
+EntryStatistics 1
+ExitPortStatistics 1
+ConnDirectionStatistics 1
+
+HiddenServiceDir /var/lib/tor/ssh/
+HiddenServicePort 22 127.0.0.1:22
+HiddenServiceAuthorizeClient stealth anon
